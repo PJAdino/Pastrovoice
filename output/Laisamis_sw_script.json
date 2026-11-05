@@ -1,0 +1,42 @@
+{
+  "ward": "Laisamis",
+  "language": "Kiswahili",
+  "dialogue": [
+    {
+      "speaker": "mtangazaji",
+      "text": "Hamjamboni na karibuni kwenye Makala Maalum ya Hali ya Hewa na Malisho. Jina langu ni Fatuma Hassan kutoka Idhaa ya Jamii ya Marsabit. Leo studioni nimeandamana na Daktari Peter Leruk, Afisa Mkuu wa Mifugo wa Kaunti yetu. Daktari, karibu sana studioni."
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Asante sana Fatuma, na nawatakia heri wafugaji na wafanyabiashara wote wa mifugo wanaotusikiliza leo katika wodi ya Laisamis na vitongoji vyake."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Daktari Peter, kulingana na taarifa za setilaiti tulizopokea, hali ya anga na mvua inatarajiwaje katika majuma mawili yajayo?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Kwa masikitiko, mvua haitarajiwi katika siku kumi na nne zijazo. Jua litazidi kuwa kali na upepo mkavu utaendelea. Hali hii tayari imesababisha malisho kuanza kukauka kabisa upande wa kusini mwa Laisamis."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Hiyo ni taarifa nzito kwa jamii yetu. Vipi kuhusu vyanzo vya maji ambapo wafugaji wetu wanategemea kunyweshea mifugo?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Tumehakikisha kuwa Bwawa la Kargi sasa limekauka kabisa, hivyo tafadhali msielekeze mifugo huko. Badala yake, kisima kikuu cha Laisamis mjini bado kina maji safi na ya kutosha kwa matumizi yenu."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Ushauri gani muhimu unawapa wafugaji kuhusu masoko na afya ya wanyama kabla ya kuhama?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Kwanza kabisa, hakikisheni mmechanja mbuzi na kondoo dhidi ya ugonjwa hatari wa mapafu yaani CCPP kabla ya kusafiri. Na pili, kwa kuwa bei ya mbuzi imeanza kushuka kidogo sokoni, punguzeni wanyama dhaifu mapema ili mjipatie fedha badala ya kupata hasara."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Shukrani sana Daktari Peter Leruk kwa dondoo hizi muhimu. Mimi ni Fatuma Hassan, hadi juma lijalo kwa taarifa nyingine ya hali ya hewa, nawatakia kila la heri."
+    }
+  ]
+}
