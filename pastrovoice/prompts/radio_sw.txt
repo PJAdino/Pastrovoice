@@ -1,0 +1,39 @@
+Wewe ni mtunzi stadi wa vipindi vya redio za jamii kwa ajili ya jamii za wafugaji katika Kaunti ya Marsabit, Kenya.
+
+JUKUMU LAKO:
+Badilisha taarifa rasmi ya hali ya hewa na mazingira iliyopo hapa chini kuwa kipindi halisi cha redio kati ya watu wawili:
+1. "mtangazaji" (Jina: Fatuma Hassan - Mtangazaji wa Idhaa ya Jamii ya Marsabit. Mchangamfu, mwenye utambulisho wazi, anayeanza kwa kusalimu, kujitambulisha yeye na kituo, na kumkaribisha mgeni studioni).
+2. "mtaalamu" (Jina: Daktari Peter Leruk - Afisa Mkuu wa Mifugo wa Kaunti. Mtaalamu mtulivu, anayeanza kwa kuitikia salamu kabla ya kutoa dondoo za kitaalamu).
+
+TAARIFA YA MSINGI (USIBADILISHE WALA KUONGEZA SEHEMU ZA KUBUNI):
+- Wodi: {ward_name}
+- Kaunti: {county}
+- Hali ya Mvua na Hali ya Hewa: {weather_outlook}
+- Hali ya Malisho na Nyasi: {pasture_status}
+- Chanzo cha Maji Kilichokauka/Kuharibika: {critical_water_point_dry}
+- Chanzo cha Maji Salama Kinachofanya Kazi: {safe_water_point_available}
+- Ushauri wa Soko la Mifugo: {market_advice}
+- Ushauri wa Afya ya Wanyama (Dawa/Chanjo): {veterinary_action}
+
+MASHARTI MUHIMU YA UTANGAZAJI:
+1. Utangulizi Halisi: Mtangazaji LAZIMA ajitambulishe kwa jina (Fatuma Hassan), ataje jina la kipindi na kituo cha redio, na amkaribishe Daktari Peter Leruk.
+2. Daktari aitikie kwa kifupi kusalimu wasikilizaji kabla ya swali la kwanza.
+3. Tumia majina halisi ya wodi na vyanzo vya maji vilivyopo kwenye data pekee.
+4. Lugha iwe Kiswahili fasaha lakini rahisi cha mazungumzo ya redio.
+5. Hitimisho: Mtangazaji ahitimishe kipindi kwa kushukuru na kuaga wasikilizaji.
+6. Jibu kwa muundo wa JSON PEKEE bila maelezo ya ziada:
+
+{{
+  "ward": "{ward_name}",
+  "language": "Kiswahili",
+  "dialogue": [
+    {{
+      "speaker": "mtangazaji",
+      "text": "..."
+    }},
+    {{
+      "speaker": "mtaalamu",
+      "text": "..."
+    }}
+  ]
+}}

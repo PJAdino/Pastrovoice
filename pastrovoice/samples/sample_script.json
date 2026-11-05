@@ -1,0 +1,86 @@
+{
+  "sw": {
+    "ward": "Laisamis",
+    "language": "Kiswahili",
+    "dialogue": [
+      {
+        "speaker": "mtangazaji",
+        "text": "Hamjamboni na karibuni kwenye Makala Maalum ya Hali ya Hewa na Malisho. Jina langu ni Fatuma Hassan kutoka Idhaa ya Jamii ya Marsabit. Leo studioni nimeandamana na Daktari Peter Leruk, Afisa Mkuu wa Mifugo wa Kaunti yetu. Daktari, karibu sana studioni."
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Asante sana Fatuma, na nawatakia heri wafugaji na wafanyabiashara wote wa mifugo wanaotusikiliza leo katika wodi ya Laisamis na vitongoji vyake."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Daktari Peter, kulingana na taarifa za setilaiti tulizopokea, hali ya anga na mvua inatarajiwaje katika majuma mawili yajayo?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Kwa masikitiko, mvua haitarajiwi katika siku kumi na nne zijazo. Jua litazidi kuwa kali na upepo mkavu utaendelea. Hali hii tayari imesababisha malisho kuanza kukauka kabisa upande wa kusini mwa Laisamis."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Hiyo ni taarifa nzito kwa jamii yetu. Vipi kuhusu vyanzo vya maji ambapo wafugaji wetu wanategemea kunyweshea mifugo?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Tumehakikisha kuwa Bwawa la Kargi sasa limekauka kabisa, hivyo tafadhali msielekeze mifugo huko. Badala yake, kisima kikuu cha Laisamis mjini bado kina maji safi na ya kutosha kwa matumizi yenu."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Ushauri gani muhimu unawapa wafugaji kuhusu masoko na afya ya wanyama kabla ya kuhama?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Kwanza kabisa, hakikisheni mmechanja mbuzi na kondoo dhidi ya ugonjwa hatari wa mapafu yaani CCPP kabla ya kusafiri. Na pili, kwa kuwa bei ya mbuzi imeanza kushuka kidogo sokoni, punguzeni wanyama dhaifu mapema ili mjipatie fedha badala ya kupata hasara."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Shukrani sana Daktari Peter Leruk kwa dondoo hizi muhimu. Mimi ni Fatuma Hassan, hadi juma lijalo kwa taarifa nyingine ya hali ya hewa, nawatakia kila la heri."
+      }
+    ]
+  },
+  "en": {
+    "ward": "Laisamis",
+    "language": "English",
+    "dialogue": [
+      {
+        "speaker": "mtangazaji",
+        "text": "Good afternoon and welcome to your Weekly Rangeland and Climate Advisory. I am your host, Fatuma Hassan, broadcasting from Marsabit Community Radio. In studio with me today is Dr. Peter Leruk, our County Senior Livestock and Agricultural Officer. Dr. Leruk, a warm welcome to the studio."
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Thank you, Fatuma. It is a pleasure to be here with our pastoralists, herders, and livestock traders tuning in across Laisamis and neighbouring areas."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Dr. Leruk, looking at the latest satellite moisture and precipitation reports, what should our communities expect over the next two weeks?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "Unfortunately, no rainfall is projected for the coming fourteen days. Dry winds and strong daytime heat will persist. Consequently, pasture cover across southern Laisamis has deteriorated significantly."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "That is critical guidance for our migration planning. What is the latest verified status on our key community water points?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "We have confirmed that Kargi Pan has completely dried up, so herders must avoid driving herds towards that corridor. However, the primary Laisamis Town borehole remains operational with safe, dependable yield."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "What vital advice do you have regarding livestock health and local market trends?"
+      },
+      {
+        "speaker": "mtaalamu",
+        "text": "First, vaccinate your small stock against contagious respiratory disease before moving them north. Second, goat prices are softening at the local market, so herders are strongly encouraged to de-stock weaker animals now to preserve household income."
+      },
+      {
+        "speaker": "mtangazaji",
+        "text": "Thank you very much, Dr. Peter Leruk, for these timely insights. I am Fatuma Hassan, wishing all our pastoralist families safe grazing until our next bulletin."
+      }
+    ]
+  }
+}

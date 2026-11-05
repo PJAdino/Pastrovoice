@@ -1,0 +1,42 @@
+{
+  "ward": "North Horr",
+  "language": "English",
+  "dialogue": [
+    {
+      "speaker": "mtangazaji",
+      "text": "Good afternoon and welcome to your Weekly Rangeland and Climate Advisory. I am your host, Fatuma Hassan, broadcasting from Marsabit Community Radio. In studio with me today is Dr. Peter Leruk, our County Senior Livestock and Agricultural Officer. Dr. Leruk, a warm welcome to the studio."
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Thank you, Fatuma. It is a pleasure to be here with our pastoralists, herders, and livestock traders tuning in across Laisamis and neighbouring areas."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Dr. Leruk, looking at the latest satellite moisture and precipitation reports, what should our communities expect over the next two weeks?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "Unfortunately, no rainfall is projected for the coming fourteen days. Dry winds and strong daytime heat will persist. Consequently, pasture cover across southern Laisamis has deteriorated significantly."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "That is critical guidance for our migration planning. What is the latest verified status on our key community water points?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "We have confirmed that Kargi Pan has completely dried up, so herders must avoid driving herds towards that corridor. However, the primary Laisamis Town borehole remains operational with safe, dependable yield."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "What vital advice do you have regarding livestock health and local market trends?"
+    },
+    {
+      "speaker": "mtaalamu",
+      "text": "First, vaccinate your small stock against contagious respiratory disease before moving them north. Second, goat prices are softening at the local market, so herders are strongly encouraged to de-stock weaker animals now to preserve household income."
+    },
+    {
+      "speaker": "mtangazaji",
+      "text": "Thank you very much, Dr. Peter Leruk, for these timely insights. I am Fatuma Hassan, wishing all our pastoralist families safe grazing until our next bulletin."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_name": "Laisamis",
+  "county": "Marsabit",
+  "language": "sw",
+  "urgency_level": "High",
+  "weather_outlook": "Mvua haitarajiwi kwa wiki mbili zijazo; jua na upepo mkali zitaendelea.",
+  "weather_outlook_en": "No rainfall expected over the next 14 days; strong winds and high daytime temperatures will persist.",
+  "pasture_status": "Malisho yameanza kukauka upande wa kusini mwa Laisamis.",
+  "pasture_status_en": "Pasture conditions have deteriorated across southern Laisamis.",
+  "critical_water_point_dry": "Bwawa la Kargi limekauka kabisa.",
+  "critical_water_point_dry_en": "Kargi Pan is confirmed completely dry.",
+  "safe_water_point_available": "Kisima cha Laisamis mjini bado kina maji safi na ya kuaminika.",
+  "safe_water_point_available_en": "Laisamis Town borehole remains operational with reliable water yield.",
+  "market_advice": "Bei ya mbuzi inashuka kidogo; ni wakati mzuri wa kupunguza mifugo dhaifu sokoni.",
+  "market_advice_en": "Goat prices are trending downwards; herders are advised to sell off weaker stock before body condition drops further.",
+  "veterinary_action": "Chanja mifugo dhidi ya magonjwa ya mapafu (CCPP) kabla ya kuhama.",
+  "veterinary_action_en": "Vaccinate small stock against Contagious Caprine Pleuropneumonia (CCPP) prior to moving northward."
+}
