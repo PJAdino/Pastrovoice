@@ -1,18 +1,46 @@
-# Python
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
-*.egg-info/
-.venv/
-venv/
+*$py.class
+*.so
+.Python
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+.ipynb_checkpoints/
 
-# Environment and secrets
+# Virtual environments and tool metadata
+.venv/
+venv/
+.venv-*/
+venv-*/
+env/
+ENV/
+.python-version
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+pip-wheel-metadata/
+
+# Environment files and secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.sqlite3
+*.db
 
-# Data and generated outputs
+# Project data and generated output
 /data/raw/**
 !/data/raw/README*
 /data/interim/**
@@ -20,17 +48,38 @@ venv/
 !/data/processed/.gitkeep
 /data/demo/*
 !/data/demo/.gitkeep
-
-# OS/editor state
-.DS_Store
-.vscode/
-
-# Build artifacts
-build/
-dist/
-*.log
-
+/output/**
+!/output/.gitkeep
 backend/data/raw/
 frontend/data/*.geojson
-.env
-.venv/
+
+# Local app/generated runtime files
+logs/
+*.log
+*.pid
+*.tmp
+*.bak
+*.orig
+
+# IDE and OS state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local database and service state
+*.sqlite3-journal
+*.db-shm
+*.db-wal
+
+# Optional node tooling if ever added locally
+node_modules/
+.npm/
+.pnpm-store/
+
+# Common generated docs or package artifacts
+site/
+coverage.xml
+
+# Keep placeholder files tracked
+!**/.gitkeep
