@@ -83,3 +83,46 @@ coverage.xml
 
 # Keep placeholder files tracked
 !**/.gitkeep
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python packaging
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Frontend dependencies
+node_modules/
+
+# Frontend build outputs
+.next/
+out/
+coverage/
+
+# Temporary files
+*.tmp
+*.bak
