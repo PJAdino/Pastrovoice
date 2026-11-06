@@ -1,5 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 const state = { node: "language", language: null, ward_code: null };
+let availableLanguages = [];
 
 document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => {
   document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === tab));
@@ -16,6 +17,8 @@ async function loadCatalog() {
     const response = await fetch("/api/catalog");
     if (!response.ok) throw new Error("Could not load broadcast catalog");
     const { broadcasts } = await response.json();
+    availableLanguages = [...new Set(broadcasts.map((item) => item.language))];
+    restart();
     $("#count").textContent = `${broadcasts.length} available`;
     if (!broadcasts.length) {
       host.innerHTML = '<div class="empty">No complete Layer 3 MP3 and cue-sheet pairs were found. Generate a broadcast into the repository output folder, then reload this page.</div>';
@@ -34,12 +37,12 @@ async function loadCatalog() {
       info.append(title, meta);
       const actions = document.createElement("div");
       actions.className = "card-actions";
-      const preview = document.createElement("a");
-      preview.className = "action";
-      preview.href = item.audio_url;
-      preview.target = "_blank";
-      preview.rel = "noreferrer";
-      preview.textContent = "Preview MP3 ↗";
+      const preview = document.createElement("audio");
+      preview.className = "broadcast-audio";
+      preview.controls = true;
+      preview.preload = "none";
+      preview.src = item.audio_url;
+      preview.setAttribute("aria-label", `Play ${item.ward} ${item.language_name} advisory`);
       const cue = document.createElement("a");
       cue.className = "action";
       cue.href = item.script_url;
@@ -47,13 +50,46 @@ async function loadCatalog() {
       const pack = document.createElement("a");
       pack.className = "action primary";
       pack.href = item.pack_url;
+      pack.download = `${item.ward_code}_${item.language}_radio_pack.zip`;
       pack.textContent = "Download ZIP ↓";
-      actions.append(preview, cue, pack);
-      card.append(info, actions);
+      const downloadStatus = document.createElement("p");
+      downloadStatus.className = "download-status";
+      downloadStatus.setAttribute("role", "status");
+      downloadStatus.setAttribute("aria-live", "polite");
+      pack.addEventListener("click", async (event) => {
+        event.preventDefault();
+        pack.setAttribute("aria-busy", "true");
+        pack.textContent = "Preparing download…";
+        downloadStatus.textContent = "Preparing your radio pack. This page will stay open.";
+        try {
+          const response = await fetch(item.pack_url);
+          if (!response.ok) throw new Error(`Download failed (${response.status})`);
+          const objectUrl = URL.createObjectURL(await response.blob());
+          const downloadLink = document.createElement("a");
+          downloadLink.href = objectUrl;
+          downloadLink.download = `${item.ward_code}_${item.language}_radio_pack.zip`;
+          downloadLink.hidden = true;
+          document.body.append(downloadLink);
+          downloadLink.click();
+          downloadLink.remove();
+          window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+          downloadStatus.textContent = "Radio pack download started. You can keep using this page.";
+        } catch (error) {
+          downloadStatus.textContent = `Could not download the pack: ${error.message}`;
+        } finally {
+          pack.removeAttribute("aria-busy");
+          pack.textContent = "Download ZIP ↓";
+        }
+      });
+      actions.append(cue, pack);
+      card.append(info, preview, actions, downloadStatus);
       return card;
     }));
   } catch (error) {
-    host.innerHTML = `<div class="empty">${error.message}</div>`;
+      const message = document.createElement("div");
+      message.className = "empty";
+      message.textContent = error.message;
+      host.replaceChildren(message);
   }
 }
 
@@ -76,12 +112,17 @@ function setMenu(result) {
   if (result.language) state.language = result.language;
   if (result.ward_code) state.ward_code = result.ward_code;
   $("#prompt").textContent = result.prompt;
-  $("#choices").textContent = (result.options || []).map((option) => {
-    if (option.language === "sw") return "1 · Kiswahili";
-    if (option.language === "en") return "2 · English";
-    return `${option.digit} · ${option.ward}`;
-  }).join("\n");
-  $("#choices").style.whiteSpace = "pre-line";
+  const choices = result.options || [];
+  $("#choices").replaceChildren(...choices.map((option) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "choice-key";
+    const label = option.language === "sw" ? "Kiswahili" : option.language === "en" ? "English" : option.ward;
+    button.textContent = `${option.digit} · ${label}`;
+    button.setAttribute("aria-label", `Press ${option.digit} for ${label}`);
+    button.addEventListener("click", () => press(option.digit));
+    return button;
+  }));
   if (result.audio_url) {
     const audio = $("#audio");
     audio.src = result.audio_url;
@@ -116,8 +157,25 @@ function restart() {
   $("#audio").hidden = true;
   $("#playing-title").textContent = "Select a menu option";
   $("#player-help").textContent = "Audio will appear here when you select a ward.";
-  setMenu({ node: "language", prompt: "Choose language: press 1 for Kiswahili, press 2 for English.", options: [{ digit: "1", language: "sw" }, { digit: "2", language: "en" }] });
+  const options = [
+    ...(availableLanguages.includes("sw") ? [{ digit: "1", language: "sw" }] : []),
+    ...(availableLanguages.includes("en") ? [{ digit: "2", language: "en" }] : []),
+  ];
+  setMenu({
+    node: "language",
+    prompt: options.length ? "Choose a language for the advisory." : "No audio advisories are available yet. Load or generate a Layer 3 broadcast, then reload this page.",
+    options,
+  });
 }
+
+document.addEventListener("keydown", (event) => {
+  if (!$("#ivr").classList.contains("active")) return;
+  if (event.target.closest("input, select, textarea, audio")) return;
+  if (/^[0-9*#]$/.test(event.key)) {
+    event.preventDefault();
+    press(event.key);
+  }
+});
 
 $("#restart").addEventListener("click", restart);
 drawKeypad();
